@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Терминал</title>
+  <style>
+    :root{
+        --terminal-bg: black;
+        --terminal-fg: #ffffff;
+      }
+
+    button {
+      background: transparent;
+      border: none;
+      color: var(--terminal-fg);
+      font-family: monospace;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    #content {
+      top: 0;
+      height: 100%;
+      background: var(--terminal-bg);
+      color: var(--terminal-fg);
+      font-family: monospace;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #terminal {
+      height: 95%;
+      white-space: pre-wrap;
+    }
+
+    .input-line {
+      width: 100%;
+      position: fixed;
+      display: flex;
+    }
+
+    .prompt {
+      margin-right: 5px;
+    }
+
+    input {
+      height: 100%;
+      bottom: 0;
+      background: transparent;
+      border: none;
+      color: var(--terminal-fg);
+      font-family: monospace;
+      font-size: 1em;
+      flex-grow: 1;
+      outline: none;
+    }
+
+        body {
+        margin: 0;
+        padding: 0;
+        background-color: #e0e0e0;
+        font-family: Arial, sans-serif;
+    }
+    
+    #desktop {
+        width: 100%;
+        height: 100%;
+        background-color: #e0e0e0;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        
+    }
+
+    .bar {
+        width: 100%;
+        height: 30px;
+        background-color: #d0d0d0;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        position: fixed;
+        padding-left: 20px;
+        align-items: center;
+        bottom: 0;
+    }
+
+    #window {
+        width: 100%;
+        height: 100%;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        position: relative;
+        display: grid;;
+        background-image: url('https://i.redd.it/d2hd73xxwvaa1.jpg');
+        grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+        gap: 20px;
+        align-content: start;
+    }
+
+    .app {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        margin: 10px;
+    }
+
+    #button_menu {
+        width: 100px;
+        height: 30px;
+        background-color: #d0d0d0;
+        border: none;
+        color: #333;
+        font-family: monospace;
+        font-size: 1em;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    #button_menu:hover {
+        background-color: #c0c0c0;
+    }
+    .bar_button {
+        background-color: #414141;
+        border: none;
+        color: #cacaca;
+        font-family: monospace;
+        font-size: 1em;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+  </style>
+</head>
+<body>
+    
+
+  <div id="desktop">
+    <h1>Project voice</h1>
+    <button id="button_menu" onclick="loadPage('systemInit')">go to system</button>
+    <button id="button_menu" onclick="loadPage('doc')">documentation</button>
+
+  </div>   
+
+
+  <script src="terminal.js"></script>
+  
+</body>
+</html>
